@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="masthead">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Zaloguj się</h2>
+                    <!--<h3 class="section-subheading text-muted">Aby zarejstować się na kurs wypełnij poniższy formularz.</h3>-->
+                </div>
+                <form id="registrationForm" onsubmit="return sprawdz()">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 col-sm-6 col-6">
+                            <div class="form-group">
+                                <input class="form-control" id="login" type="text" name="login" placeholder="Login" required="required" />
+                                <p class="help-block text-danger" id="nameError"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="passwd" type="text" name="passwd" placeholder="Hasło" required="required" />
+                                <p class="help-block text-danger" id="lastNameError"></p>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>  
+                    <div class="text-center">
+                        <div id="success"></div>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Zaloguj</button></br>
+                        Nie masz konta?<a href="./registration.html"><button type="button" id="registrationBtn" class="btn btn-link .btn-sm" >Zarejestruj się</button></a>
+                    </div>
+                    <div class="text-center" id="change"></div>
+                    
+                </form>
+
+            </div>
+        </header>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
+
+

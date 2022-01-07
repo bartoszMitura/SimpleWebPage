@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="masthead">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Zarejestruj się</h2>
+                    <!--<h3 class="section-subheading text-muted">Aby zarejstować się na kurs wypełnij poniższy formularz.</h3>-->
+                </div>
+                <form id="registrationForm" onsubmit="return sprawdz()">
+                    <div class="row justify-content-center">
+                        <div class="col-2">
+                            <div class="form-group">
+                                <input class="form-control" id="fname" type="text" name="fname" placeholder="Imię *" required="required" />
+                                <p class="help-block text-danger" id="nameError"></p>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="form-group">
+                                <input class="form-control" id="lastName" type="text" name="lastName" placeholder="Nazwisko *" required="required" />
+                                <p class="help-block text-danger" id="lastNameError"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <input class="form-control" id="email" type="email" name="email" placeholder="E-mail *" required="required" />
+                                <p class="help-block text-danger" id="emailError"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <input class="form-control" id="passwd" type="password" name="passwd" placeholder="Hasło*" required="required" />
+                                
+                                <p class="help-block text-danger" id="passwdError"></p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="text-center">
+                        <div id="success"></div>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Zarejestruj się</button></br>
+                        
+                    </div>
+                    
+                    
+              </form>
+
+
+            </div>
+            
+        </header>
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </body>
+</html>
+
+

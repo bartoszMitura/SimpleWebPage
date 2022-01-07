@@ -37,8 +37,8 @@
                         <li class="nav-item"><a class="nav-link" href="#team">Zespół</a></li>
                         <li class="nav-item"><a class="nav-link" href="#registration">Rejestracja</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
-                        <li class="nav-item"> <a class="nav-link"><button type="button" class="btn btn-outline-light btn-sm">Zaloguj się</button></a></li>
-                        <li class="nav-item"><a class="nav-link"><button type="button" class="btn btn-outline-light btn-sm">Zarejestruj się</button></a></li>
+                        <li class="nav-item"> <a class="nav-link" href="./login.html"><button type="button" class="btn btn-outline-light btn-sm">Zaloguj się</button></a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -251,11 +251,11 @@
             </div>
         </section>
         <!-- Registration-->
-        <section class="page-section" id="registration">
-            <div class="container">
+        <section class="page-section" id="forms">
+            <div class="container" >
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Ucz się od najlepszych</h2>
-                    <h3 class="section-subheading text-muted">Aby zarejstować się na kurs wypełnij poniższy formularz.</h3>
+                    <h2 class="section-heading text-uppercase">Zaloguj się</h2>
+                    <!--<h3 class="section-subheading text-muted">Aby zarejstować się na kurs wypełnij poniższy formularz.</h3>-->
                 </div>
                 <form id="registrationForm" onsubmit="return sprawdz()">
                     <div class="row align-items-stretch mb-6">
@@ -276,77 +276,15 @@
                                 <p class="help-block text-danger" id="phoneError"></p>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input class="form-control" id="email" type="email" name="email" placeholder="E-mail *" required="required" />
-                                <p class="help-block text-danger" id="emailError"></p>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" id="adress" type="text" name="adress" placeholder="Adres *" required="required" />
-                                <p class="help-block text-danger" id="adressError"></p>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <input class="form-control" id="age" type="text" name="age" placeholder="Wiek *" required="required" />
-                                <p class="help-block text-danger" id="ageError"></p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="row algin-items-stretch mb-6">
-                        <div class="col-md-6">
-                            <div class="text-center">
-                                <h5>Wybierz rodzaj kursu</h5>
-                            </div>
-                            <div class="form-check ">
-                                <input class="form-check-input" type="checkbox" name="produkt" value="AdministracjaSieci" id="administracjaSieci">
-                                <label class="form-check-label" for="administracjaSieci">
-                                Administracja sieci
-                                </label>
-                            </div>
-                            <div class="form-check ">
-                                <input class="form-check-input" type="checkbox" name="produkt" value="AplikacjeInternetowe" id="aplikacjeInternetowe" >
-                                <label class="form-check-label" for="aplikacjeInternetowe">
-                                Aplikacje internetowe
-                                </label>
-                            </div>
-                            <div class="form-check ">
-                                <input class="form-check-input" type="checkbox" name="produkt" value="bezpieczenstwoInformacji" id="bezpieczenstwoInformacji" >
-                                <label class="form-check-label" for="bezpieczenstwoInformacji">
-                                Bezpieczeństwo Informacji
-                                </label>
-                            </div>
-                            <p class="help-block text-danger" id="checkError"></p>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="text-center">
-                                <h5>Wybierz rodzaj zapłaty</h5>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="zaplata" id="karta" value="karta" checked>
-                                <label class="form-check-label" for="karta">
-                                  Karta
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="zaplata" id="gotowka" value="gotowka">
-                                <label class="form-check-label" for="gotowka">
-                                  Gotówka
-                                </label>
-                            </div>
-                            <div class="form-check ">
-                                <input class="form-check-input" type="radio" name="zaplata" id="przelew" value="przelew" >
-                                <label class="form-check-label" for="przelew">
-                                  Przelew
-                                </label>
-                            </div>
-                        </div>
+                        
+                    </div>  
                     <div class="text-center">
                         <div id="success"></div>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Zapisz się!</button>
-                        
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Zaloguj</button></br>
+                        Nie masz konta?<button type="button" id="registrationBtn" class="btn btn-link .btn-sm">Zarejestruj się</button>
                     </div>
                     <div class="text-center" id="change"></div>
-                    </div>
+                    
                 </form>
             </div>
         </section>

@@ -51,6 +51,22 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+        //Skrypt z Fetch API
+    //sprawdź czy DOM został załadowany:
+    var formularz =  function() {
+        //obsługa zdarzenia kliknięcia na b1:
+        var but1 = document.getElementById("registrationBtn");
+        but1.addEventListener('click', function(){
+        fetch("http://localhost/CodeItBetter/registrationForm/regForm.html")
+        .then( response => {return response.text();} )
+        .then( dane => { document.getElementById("forms").innerHTML = dane; })
+        },
+        false);
+    
+        
+    };
+
+    formularz();
     
 
 });
@@ -169,6 +185,36 @@ function zapisz(event){
 const form = document.querySelector('form');
 form.addEventListener('submit',pokazDane);
 form.addEventListener('submit', zapisz);
+
+/*
+document.getElementById("registrationBtn").addEventListener("click",registrationForm);
+
+const xhr = new XMLHttpRequest();
+
+function registrationForm(){
+     if(xhr){
+         var url = "http://localhost/CodeItBetter/registrationForm/backUp.txt";
+         xhr.open("GET",url);
+         xhr.addEventListener("readystatechange", function (){
+             if(xhr.readyState === 4){
+                 document.getElementById("forms").innerHTML = xhr.responseText;
+             }
+         });
+         xhr.send(null);
+     }
+}
+
+
+document.addEventListener("DOMContentLoaded",function(){
+    var but1 = document.getElementById("registrationBtn");
+    but1.addEventListener('click',function(){
+        fetch("http://localhost/CodeItBetter/registrationForm/backUp.txt")
+        .then( response => {return response.text();})
+        .then( dane => { document.getElementById("forms").innerHTML = dane;})
+    }, false);
+})
+
+*/
 
 function usunZgloszenie(){
     var lista = JSON.parse(localStorage.getItem('lista'));
